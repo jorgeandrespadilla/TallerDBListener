@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inboundEndpoint class="org.wso2.carbon.inbound.poll.dbeventlistener.DBEventPollingConsumer" name="CustomerDBEventEP" onError="eventProcessFailSeq" sequence="DBEventProcessSeq" suspend="false" xmlns="http://ws.apache.org/ns/synapse">
+    <parameters>
+        <parameter name="interval">1000</parameter>
+        <parameter name="class">org.wso2.carbon.inbound.poll.dbeventlistener.DBEventPollingConsumer</parameter>
+        <parameter name="sequential">true</parameter>
+        <parameter name="coordination">true</parameter>
+        <parameter name="inbound.behavior">polling</parameter>
+        <parameter name="driverName">com.mysql.jdbc.Driver</parameter>
+        <parameter name="url">jdbc:mysql://localhost/tallerwso2</parameter>
+        <parameter name="username">root</parameter>
+        <parameter name="password">admin123</parameter>
+        <parameter name="tableName">CDC_CUSTOM</parameter>
+        <parameter name="filteringCriteria">byLastUpdatedTimestampColumn</parameter>
+        <parameter name="filteringColumnName">UPDATED_AT</parameter>
+        <parameter name="primaryKey">ID</parameter>
+        <parameter name="connectionValidationQuery">SELECT 1</parameter>
+        <parameter name="registryPath">dbEventIE/timestamp</parameter>
+    </parameters>
+</inboundEndpoint>
