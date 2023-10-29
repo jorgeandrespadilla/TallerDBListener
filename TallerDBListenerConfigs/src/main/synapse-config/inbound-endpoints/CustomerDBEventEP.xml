@@ -6,8 +6,8 @@
         <parameter name="sequential">true</parameter>
         <parameter name="coordination">true</parameter>
         <parameter name="inbound.behavior">polling</parameter>
-        <parameter name="driverName">com.mysql.jdbc.Driver</parameter>
-        <parameter name="url">jdbc:mysql://localhost/tallerwso2</parameter>
+        <parameter name="driverName">com.mysql.cj.jdbc.Driver</parameter>
+        <parameter name="url">jdbc:mysql://localhost:3306/tallerwso2</parameter>
         <parameter name="username">root</parameter>
         <parameter name="password">admin123</parameter>
         <parameter name="tableName">CDC_CUSTOM</parameter>

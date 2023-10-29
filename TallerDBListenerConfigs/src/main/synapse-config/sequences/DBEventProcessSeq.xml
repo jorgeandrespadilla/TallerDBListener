@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="DBEventProcessSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log description="event log" level="full">
+        <property name="message" value="event received"/>
+    </log>
+</sequence>
